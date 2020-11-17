@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Upload_Image_with_Progress_Bar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oK3-5F-Xax">
+                                <rect key="frame" x="0.0" y="97" width="414" height="215"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="TqJ-hV-pQ8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-O3-u6m">
+                                <rect key="frame" x="137" y="395" width="140" height="43"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="WbK-3V-n9N"/>
+                                    <constraint firstAttribute="height" constant="43" id="yLB-YO-D0t"/>
+                                </constraints>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnUploadTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="otT-Xi-P25"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tbe-9b-XoW">
+                                <rect key="frame" x="20" y="476" width="374" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="nqR-ez-kNE"/>
+                                </constraints>
+                                <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsN-hB-YeE">
+                                <rect key="frame" x="10" y="498" width="394" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PFT-wq-0Kk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-XL-b7c">
+                                <rect key="frame" x="137" y="342" width="140" height="43"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="pYo-EO-uXG"/>
+                                    <constraint firstAttribute="width" constant="140" id="t4X-ba-JQg"/>
+                                </constraints>
+                                <state key="normal" title="Select  Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSelectImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5z-Ds-KdC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oK3-5F-Xax" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4eV-qJ-iLi"/>
+                            <constraint firstItem="Z1n-O3-u6m" firstAttribute="top" secondItem="Ibh-XL-b7c" secondAttribute="bottom" constant="10" id="5jD-5d-pxX"/>
+                            <constraint firstItem="Ibh-XL-b7c" firstAttribute="top" secondItem="oK3-5F-Xax" secondAttribute="bottom" constant="30" id="7ov-QT-dhn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GsN-hB-YeE" secondAttribute="trailing" constant="10" id="FOX-1i-bvZ"/>
+                            <constraint firstItem="tbe-9b-XoW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="GiK-sH-gV6"/>
+                            <constraint firstItem="Z1n-O3-u6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KgC-i2-X3a"/>
+                            <constraint firstItem="oK3-5F-Xax" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="Pai-2Y-sz5"/>
+                            <constraint firstItem="tbe-9b-XoW" firstAttribute="top" secondItem="Z1n-O3-u6m" secondAttribute="bottom" constant="38" id="RaF-D6-P99"/>
+                            <constraint firstAttribute="trailing" secondItem="tbe-9b-XoW" secondAttribute="trailing" constant="20" id="USg-Wg-zTs"/>
+                            <constraint firstItem="GsN-hB-YeE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ga9-ff-mDR"/>
+                            <constraint firstItem="GsN-hB-YeE" firstAttribute="top" secondItem="tbe-9b-XoW" secondAttribute="bottom" constant="20" id="giA-uA-p7T"/>
+                            <constraint firstItem="oK3-5F-Xax" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h6b-Nc-tYB"/>
+                            <constraint firstItem="Z1n-O3-u6m" firstAttribute="top" secondItem="oK3-5F-Xax" secondAttribute="bottom" constant="100" id="i9W-lh-fJy"/>
+                            <constraint firstItem="Ibh-XL-b7c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jl9-uN-19i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="i9W-lh-fJy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnUpload" destination="Z1n-O3-u6m" id="AvG-qX-mRw"/>
+                        <outlet property="imgUploadProgressView" destination="tbe-9b-XoW" id="kKE-5r-uOW"/>
+                        <outlet property="imgView" destination="oK3-5F-Xax" id="nud-ck-7eh"/>
+                        <outlet property="lblProgressPercent" destination="GsN-hB-YeE" id="yHA-gD-sdK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
